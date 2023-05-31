@@ -1,35 +1,60 @@
-How to setup LaTex in VSCode: 
+# Instructions for setting up LaTeX in VSCode
+---
+# 1. Download VSCode
+- Link: https://code.visualstudio.com/download
 
-Steps:
+# 2. Install LaTex Workshop from VSCode Extensions
+- Your code in example.tex should now be colored (VSCode recognizes the language now)
 
-1. Open up an Ubuntu-20.04 (WSL) Terminal in VSCode
+# Just for kicks:
+Try building the .tex file into a PDF to see if you can get this error...
+- Open Tex: Ctrl-Alt-X
+- While in the file example.tex, click Build LaTeX project
+    - You should get this error: 
 
-1. install TexLive: sudo apt-get install texlive-full
+    ![error message](./figures/error.png)
 
-1. Install the following from VSCode Extensions:
-- LaTeX
-- LaTeX Workshop / LaTex Utilities
-- LaTeX language support
+    - Close VSCode after receiving this error!
 
-1. Restart your computer
+# 3. Download MiKTex for Windows
+- Link: https://miktex.org/download
+- Upon download completion, open up MiKTex Console:
+    - Overview > Check for updates
+    - Updates > Update Now
+        - Upon completion of updates, a windows Terminal might appear on-screen: (If it does not, don't worry. Continue on.) 
 
-1. Create a an empty folder named 'latex' (this will be your Github Repo)
-- Copy and paste the code from the bottom of this document and save as example.tex
-- Get the .gitignore from here: https://github.com/github/gitignore/blob/main/TeX.gitignore
-- Get LICENSE from here: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository
-- Get README.md from here: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes
+            ![pop-up](./figures/pop-up.png)
 
-1. Check that your LaTex works
-- It should look like this: 
+# 4. Download Strawberry Perl
+- Link: https://strawberryperl.com/
+    - Download the 64-bit version
+        - Keep it at location C:\Strawberry\
 
-    ![picture of working LaTex w/ math equation](./pngs/example.png)
+- About Perl: Strawberry Perl is designed to be as close as possible to perl environment on UNIX systems. See http://strawberryperl.com/
 
-Reference Links: 
+# 5. Re-open VSCode and attempt to build the .tex file
+- Open up example.tex
+- Build LaTeX Project: Ctrl-Alt-B
+    - The first time you build, it has to install a bunch of packages, so it may take awhile!
 
-- https://medium.com/@rcpassos/writing-latex-documents-in-visual-studio-code-with-latex-workshop-d9af6a6b2815
+        ![building...](./figures/building.png)
 
-- https://guillaumeblanchet.medium.com/using-latex-in-visual-studio-code-on-windows-121032043dad
+# 6. View the PDF Version of the Compiled LaTeX document
+- As you can see in the file explorer, our build has completed and there is now a .pdf file to view: 
 
-- http://www1.coe.neu.edu/~jkimani/Latex1.html
+    ![file-explorer](./figures/file-explorer.png)
 
-- https://www.docx2latex.com/tutorials/mathematical-equations-latex/
+- Right click on .pdf > Open to the Side
+
+    ![side-to-side](./figures/side-to-side.png)
+
+# 7. Re-build after making changes
+- I have made a few changes. To see them reflected on the .pdf:
+    
+    - Save your file (Ctrl-S)
+
+        - The .pdf should automatically build (you should see your changes immediately!)
+
+
+## References
+- Install LaTeX Workshop and compile PDF in VSCode LaTeX (Windows): https://www.youtube.com/watch?v=4lyHIQl4VM8
