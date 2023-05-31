@@ -22,7 +22,7 @@ Steps:
 1. Check that your LaTex works
 - It should look like this: 
 
-    ![picture of working LaTex w/ math equation](./example.png)
+    ![picture of working LaTex w/ math equation](./pngs/example.png)
 
 Reference Links: 
 
